@@ -1,0 +1,29 @@
+.app-container {
+  display: inline-flex;
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+}
+.nav-container{
+  background-color: #f1f1f1;
+}
+.main-container{
+  margin-left: 10px;
+  width: -webkit-fill-available;
+}
+.nav-list {
+  margin: 10px 50px;
+  font-family: cursive;
+}
+
+.nav-list a {
+  text-decoration: none;
+}
+
+.title {
+  font-family: cursive;
+  color: #52a2a7;
+  /* box-shadow: -6px -1px black; */
+  background-color: #35787d2e;
+  text-align: center;
+  margin: 5px 0;
+}

@@ -1,0 +1,22 @@
+<form [formGroup]="registerForm" class="register-form" (ngSubmit)="loginSubmit()">
+  <div class="register-form-control">
+    <label for="username">Username</label>
+    <input type="text" name="name" id="username" placeholder="create a username"
+      formControlName="name">
+    </div>
+  <div class="register-form-control">
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" placeholder="Your email"
+      formControlName="email">
+    </div>
+    <div class="register-form-control">
+      <label for="password">Password</label>
+      <input type="password" name="password" placeholder="Your password"
+      formControlName="password">
+    </div>
+      <button type="submit" name="submit" [disabled]="!registerForm.valid">Register</button>
+</form>
+<div class="register-form-errors">
+  <span *ngIf="email.errors?.invalidEmail  && email.touched">Enter a valid email!</span>
+  <span *ngIf="password.errors?.length && password.touched">Password must be minimum of 6 letters</span>
+</div>

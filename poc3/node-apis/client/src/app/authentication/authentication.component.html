@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="auth-links">
+    <div class="auth-links__login">
+      <a [ngClass]="{'auth-link--active': authType == 'login'}" (click)="authType='login'">login</a>
+    </div>
+    <div class="auth-links__register">
+      <a [ngClass]="{'auth-link--active': authType == 'register'}" (click)="authType='register'">Register</a>
+    </div>
+  </div>
+  <app-login *ngIf="authType == 'login'">
+  </app-login>
+  <app-register *ngIf="authType == 'register'">
+  </app-register>
+</div>

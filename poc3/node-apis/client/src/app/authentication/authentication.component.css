@@ -1,0 +1,31 @@
+.container {
+  text-align: center;
+  margin: 50px auto;
+  width: 350px;
+}
+
+.auth-links {
+  display: flex;
+  margin: 0 10px;
+  width: 100%;
+}
+
+.auth-links a {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: cursive;
+  padding: 5px 55px;
+  box-shadow: 0 0 7px darkgrey;
+  border-radius: 3px;
+  border: 1px solid transparent;
+}
+
+.auth-links a:hover{
+  box-shadow: none;
+  border: 1px solid #a9a9a980;
+}
+
+.auth-link--active{
+  color: #52a2a7;
+}

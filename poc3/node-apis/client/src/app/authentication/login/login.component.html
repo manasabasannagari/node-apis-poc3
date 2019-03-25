@@ -1,0 +1,17 @@
+<form [formGroup]="loginForm" class="login-form" (ngSubmit)="loginSubmit()">
+  <div class="login-form-control">
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" placeholder="Your email"
+      formControlName="email">
+    </div>
+    <div class="login-form-control">
+      <label for="password">Password</label>
+      <input type="password" name="password" placeholder="Your password"
+      formControlName="password">
+    </div>
+      <button type="submit" name="submit" [disabled]="!loginForm.valid">Login</button>
+</form>
+<div class="login-form-errors">
+  <span *ngIf="email.errors?.invalidEmail  && email.touched">Enter a valid email!</span>
+  <span *ngIf="password.errors?.length && password.touched">Password must be minimum of 6 letters</span>
+</div>
